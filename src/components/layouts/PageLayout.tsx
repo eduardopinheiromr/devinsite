@@ -12,7 +12,7 @@ type PageLayoutProps = {
 export default function PageLayout({ children }: PageLayoutProps) {
   return (
     <>
-      <Box minH="100vh" as="main" bg="black">
+      <Box minH="100vh" as="main" bg="black" py={4}>
         {children}
       </Box>
     </>

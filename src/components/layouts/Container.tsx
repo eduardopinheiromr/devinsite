@@ -13,7 +13,11 @@ export default function Container(props: ContainerProps) {
       maxWidth="1400px"
       margin="0 auto"
       padding="15px"
-      bg="whitesmoke"
+      bg="#f0f0f0"
+      shadow="0 0 50px black"
+      rounded="lg"
+      mb={8}
+      textAlign={["center", "center", "left"]}
     >
       {props.children}
     </Box>

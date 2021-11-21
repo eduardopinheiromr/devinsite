@@ -8,13 +8,23 @@ import Editable from "@components/ui/Editable";
 
 export default function Hero() {
   return (
-    <Container bg="whitesmoke">
-      <Flex style={{ gap: 16 }} justify="center" my={16}>
+    <Container>
+      <Flex
+        direction={["column", "column", "row"]}
+        style={{ gap: 16 }}
+        justify="center"
+        align="center"
+        my={16}
+      >
         <Avatar />
         <Box w="full">
           <Editable
             contentKey="name"
-            component={<Heading as="h1">{profile.name}</Heading>}
+            component={
+              <Heading as="h1" w="full">
+                {profile.name}
+              </Heading>
+            }
           />
           <Editable
             contentKey="title"
@@ -27,7 +37,7 @@ export default function Hero() {
           <Editable
             contentKey="from"
             component={
-              <Heading as="h3" fontSize="18px" color="gray">
+              <Heading as="h3" fontSize="18px" color="gray" w="full">
                 {profile.from}
               </Heading>
             }
