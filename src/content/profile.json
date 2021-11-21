@@ -1,0 +1,11 @@
+{
+  "name": "Eduardo Pinheiro",
+  "title": "Fullstack Engineer | React.js | Next.js | Node | Nest.js",
+  "from": "São Paulo, São Paulo, Brasil",
+  "description": "<p>Sou uma descrição com <strong>texto rico </strong>e <u>funciono muito bem...</u></p>",
+  "experience": [
+    { "company": "Supporta Shop", "position": "Desenvolvedor Front End Jr." },
+    { "company": "Imobi", "position": "Desenvolvedor Front End Jr." },
+    { "company": "Playkids", "position": "Desenvolvedor Front End Pl." }
+  ]
+}
