@@ -7,5 +7,14 @@
     { "company": "Supporta Shop", "position": "Desenvolvedor Front End Jr." },
     { "company": "Imobi", "position": "Desenvolvedor Front End Jr." },
     { "company": "Playkids", "position": "Desenvolvedor Front End Pl." }
+  ],
+  "education": [
+    {
+      "institution": "Resilia Educação",
+      "course": "Desenvolvimento Web Fullstack",
+      "startDate": "",
+      "endDate": "",
+      "description": ""
+    }
   ]
 }

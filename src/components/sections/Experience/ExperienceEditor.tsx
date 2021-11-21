@@ -14,7 +14,7 @@ export default function ExperienceEditor() {
     newExperienceInitialState
   );
 
-  const saveNewCompany = async () => {
+  const saveNewEducation = async () => {
     const experience = [...(profile.experience ?? []), newExperience];
     const response = await saveProfileData({ ...profile, experience });
     setNewExperience(newExperienceInitialState);
@@ -43,7 +43,9 @@ export default function ExperienceEditor() {
           placeholder="Ex: Front End Developer"
         />
       </Box>
-      <Button onClick={saveNewCompany}>Adicionar experiência</Button>
+      <Button mt={4} onClick={saveNewEducation}>
+        Adicionar experiência
+      </Button>
     </div>
   );
 }

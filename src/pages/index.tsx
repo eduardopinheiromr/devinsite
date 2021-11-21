@@ -1,4 +1,5 @@
 import PageTags from "@components/PageTags";
+import Education from "@components/sections/Education";
 import Experience from "@components/sections/Experience";
 import Hero from "@components/sections/Hero";
 
@@ -13,6 +14,7 @@ export default function Home() {
       <PageTags {...pageTagsProps} />
       <Hero />
       <Experience />
+      <Education />
     </>
   );
 }
