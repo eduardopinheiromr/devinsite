@@ -1,4 +1,3 @@
-// write a next js api route to save a user profile in json file with fs module
 import { NextApiRequest, NextApiResponse } from "next";
 
 import fs from "fs";
@@ -7,6 +6,11 @@ export default async function profileHandler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
+  if (process.env.NODE_ENV === "production") {
+    return res
+      .status(200)
+      .json({ message: "You only can edit in development mode." });
+  }
   fs.writeFileSync(
     "src/content/profile.json",
     JSON.stringify(req.body),

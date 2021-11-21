@@ -35,6 +35,8 @@ export default function ProfileEditor() {
     alert(response.message);
   };
 
+  const disabled = process.env.NODE_ENV === "production";
+
   return (
     <>
       <Grid mt={16} gap={4} as="form" onSubmit={handleSaveProfile}>
@@ -68,7 +70,7 @@ export default function ProfileEditor() {
             placeholder="Ex: São Paulo, SP"
           />
         </Box>
-        <Button mt={4} type="submit">
+        <Button mt={4} type="submit" disabled={disabled}>
           Salvar
         </Button>
       </Grid>
@@ -84,7 +86,7 @@ export default function ProfileEditor() {
           <Avatar />
           <Box>
             <Input mb={4} name="image" type="file" />
-            <Button>Salvar avatar</Button>
+            <Button disabled={disabled}>Salvar avatar</Button>
           </Box>
         </Flex>
       </Box>

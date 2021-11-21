@@ -10,6 +10,7 @@ export type ButtonProps = {
   withIcon?: boolean | JSX.Element;
   href?: string;
   type?: "button" | "submit" | "reset";
+  disabled?: boolean;
 } & BoxProps;
 
 export default function Button(props: ButtonProps) {
@@ -47,6 +48,10 @@ function ButtonBase(props: ButtonProps) {
       d="flex"
       alignItems="center"
       justifyContent="center"
+      _disabled={{
+        bg: "gray",
+        cursor: "not-allowed",
+      }}
       // w={["300px", "300px", "300px", "340px"]}
     >
       <Text as="span" whiteSpace="nowrap">

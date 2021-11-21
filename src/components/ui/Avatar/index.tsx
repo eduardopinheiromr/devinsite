@@ -13,8 +13,10 @@ export default function Avatar() {
       rounded="full"
       border="2px"
       borderColor="lightgray"
-      w={32}
-      h={32}
+      w="full"
+      h="full"
+      maxW={48}
+      maxH={48}
     >
       <Image
         src={profileImage}

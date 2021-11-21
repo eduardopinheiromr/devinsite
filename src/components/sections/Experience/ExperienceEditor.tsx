@@ -21,6 +21,9 @@ export default function ExperienceEditor() {
 
     alert(response.message);
   };
+
+  const disabled = process.env.NODE_ENV === "production";
+
   return (
     <div>
       <Box>
@@ -43,7 +46,7 @@ export default function ExperienceEditor() {
           placeholder="Ex: Front End Developer"
         />
       </Box>
-      <Button mt={4} onClick={saveNewEducation}>
+      <Button mt={4} onClick={saveNewEducation} disabled={disabled}>
         Adicionar experiência
       </Button>
     </div>

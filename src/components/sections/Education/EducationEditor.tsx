@@ -24,6 +24,9 @@ export default function EducationEditor() {
 
     alert(response.message);
   };
+
+  const disabled = process.env.NODE_ENV === "production";
+
   return (
     <div>
       <Box my={8}>
@@ -53,7 +56,7 @@ export default function EducationEditor() {
         />
       </Box>
 
-      <Button mt={4} onClick={saveNewCompany}>
+      <Button mt={4} onClick={saveNewCompany} disabled={disabled}>
         Adicionar educação
       </Button>
     </div>
