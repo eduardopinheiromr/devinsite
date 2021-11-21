@@ -6,6 +6,7 @@ import { RiSave3Fill } from "react-icons/ri";
 import { MdOutlineCancel } from "react-icons/md";
 
 import profile from "@content/profile.json";
+import { isDevMode } from "src/utils/isDevMode";
 
 type Props = {
   component: JSX.Element;
@@ -16,7 +17,6 @@ export default function Editable({ component, contentKey }: Props) {
   const [editMode, setEditMode] = useState("");
   const [editedContent, setEditedContent] = useState("");
   const toast = useToast();
-  const isDevMode = process.env.NODE_ENV === "development";
 
   if (!isDevMode) return component;
 
@@ -49,7 +49,7 @@ export default function Editable({ component, contentKey }: Props) {
   return (
     <Flex
       position="relative"
-      bg={editMode === contentKey ? "black" : "white"}
+      bg={editMode === contentKey ? "black" : "transparent"}
       color={editMode !== contentKey ? "black" : "white"}
       rounded="md"
       align="center"

@@ -8,7 +8,7 @@ import Editable from "@components/ui/Editable";
 
 export default function Hero() {
   return (
-    <Container>
+    <Container bg="whitesmoke">
       <Flex style={{ gap: 16 }} justify="center" my={16}>
         <Avatar />
         <Box w="full">

@@ -1,3 +1,4 @@
+import { PageLayout } from "@components/layouts";
 import PageTags from "@components/PageTags";
 import Education from "@components/sections/Education";
 import Experience from "@components/sections/Experience";
@@ -10,11 +11,11 @@ const pageTagsProps = {
 
 export default function Home() {
   return (
-    <>
+    <PageLayout>
       <PageTags {...pageTagsProps} />
       <Hero />
       <Experience />
       <Education />
-    </>
+    </PageLayout>
   );
 }

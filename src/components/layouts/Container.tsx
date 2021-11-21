@@ -13,6 +13,7 @@ export default function Container(props: ContainerProps) {
       maxWidth="1400px"
       margin="0 auto"
       padding="15px"
+      bg="whitesmoke"
     >
       {props.children}
     </Box>

@@ -3,6 +3,7 @@ import {
   // Footer,
   Header,
 } from "@components/sections";
+import { Box } from "@chakra-ui/react";
 
 type PageLayoutProps = {
   children: ReactNode;
@@ -11,9 +12,9 @@ type PageLayoutProps = {
 export default function PageLayout({ children }: PageLayoutProps) {
   return (
     <>
-      <Header />
-      <main>{children}</main>
-      {/* <Footer /> */}
+      <Box minH="100vh" as="main" bg="black">
+        {children}
+      </Box>
     </>
   );
 }
