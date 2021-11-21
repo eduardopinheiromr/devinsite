@@ -1,7 +1,9 @@
 import { Button } from "@components/ui";
 import profile from "@content/profile.json";
 import { saveProfileData } from "src/services/saveProfileData";
-import ReactQuill from "react-quill";
+import dynamic from "next/dynamic";
+
+const ReactQuill = dynamic(() => import("react-quill"), { ssr: false });
 import "react-quill/dist/quill.snow.css";
 import { useState } from "react";
 import { Box, Heading } from "@chakra-ui/react";

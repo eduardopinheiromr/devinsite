@@ -1,17 +1,17 @@
-import nextConnect from "next-connect";
 import fileUpload from "express-fileupload";
+import nextConnect from "next-connect";
+import type { NextApiRequest, NextApiResponse } from "next";
 
-const apiRoute = nextConnect();
+const handler = nextConnect();
+handler.use(fileUpload());
 
-apiRoute.use(fileUpload());
+type Request = NextApiRequest & {
+  files: any;
+};
 
-apiRoute.post((req, res) => {
+handler.post((req: Request, res: NextApiResponse) => {
   let sampleFile;
   let uploadPath;
-
-  if (!req.files || Object.keys(req.files).length === 0) {
-    return res.status(400).json({ message: "No files were uploaded." });
-  }
 
   sampleFile = req.files.avatar;
   uploadPath = "./public/images/avatar.png";
@@ -24,7 +24,7 @@ apiRoute.post((req, res) => {
   });
 });
 
-export default apiRoute;
+export default handler;
 
 export const config = {
   api: {

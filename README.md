@@ -1,10 +1,12 @@
-# **Next.js Boilerplate**
+# **DevInSite**
 
-## DEMO ONLINE</a>
+## DEMO ONLINE https://devinsite.vercel.app
 
-### To get social metatags -> metatags.io
+### To get social metatags -> https://metatags.io
 
 ### To get favicon and others -> https://favicon.io/favicon-converter/
+
+<br/>
 
 # **How to quickstart development**
 
